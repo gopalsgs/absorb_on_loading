@@ -12,14 +12,15 @@ typedef AbsorbOnLoadBuilder = Widget Function(
 );
 
 class AbsorbOnLoading extends StatelessWidget {
-  final controller = AbsorbController();
+  final controller;
   final AbsorbOnLoadBuilder builder;
   final Widget child;
 
-  AbsorbOnLoading({
+  const AbsorbOnLoading({
     Key key,
     @required this.builder,
     this.child,
+    this.controller,
   }) : super(key: key);
 
   @override

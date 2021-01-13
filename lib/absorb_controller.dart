@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 
 
 class AbsorbController extends ValueNotifier<bool> {
+
   AbsorbController({bool absorb}) : super(absorb ?? false);
 
   bool get absorb => value;
