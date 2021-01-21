@@ -5,7 +5,11 @@ A Package used to ignore the pointer while a button is engaged and also shows a 
 ## How to use
 
 ```
+
+final absorbController = AbsorbController();
+
 AbsorbOnLoading(
+  controller: absorbController,
   builder: (BuildContext context, AbsorbController absorbController,
       Widget child) {
     return Column(

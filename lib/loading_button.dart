@@ -6,6 +6,9 @@ import 'absorb_controller.dart';
 typedef LoadingButtonCallBack = Future<void> Function();
 
 class LoadingButton extends RaisedButton {
+
+
+
   LoadingButton(
     AbsorbController controller, {
     Key key,

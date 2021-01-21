@@ -8,19 +8,16 @@ export 'absorb_controller.dart';
 typedef AbsorbOnLoadBuilder = Widget Function(
   BuildContext context,
   AbsorbController absorbController,
-  Widget child,
 );
 
 class AbsorbOnLoading extends StatelessWidget {
   final controller;
   final AbsorbOnLoadBuilder builder;
-  final Widget child;
 
   const AbsorbOnLoading({
     Key key,
     @required this.builder,
-    this.child,
-    this.controller,
+    @required this.controller,
   }) : super(key: key);
 
   @override
@@ -30,7 +27,7 @@ class AbsorbOnLoading extends StatelessWidget {
       builder: (context, value, child) {
         return AbsorbPointer(
           absorbing: value,
-          child: builder(context, controller, child),
+          child: builder(context, controller),
         );
       },
     );
